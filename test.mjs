@@ -1,0 +1,7 @@
+import assert from 'node:assert/strict';
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+const root=new URL('.',import.meta.url).pathname;
+for(const file of ['index.html','style.css','mallorca.css','storage.js','app.js','manifest.json','sw.js','assets/icon.png','assets/calo-des-moro.jpg','assets/cala-salmunia.jpg','assets/cala-llombards.jpg','assets/palma.jpg','assets/boat-night.jpg'])assert.equal(existsSync(join(root,file)),true,`Arquivo ausente: ${file}`);
+const html=readFileSync(join(root,'index.html'),'utf8');const app=readFileSync(join(root,'app.js'),'utf8');const storage=readFileSync(join(root,'storage.js'),'utf8');const manifest=JSON.parse(readFileSync(join(root,'manifest.json'),'utf8'));
+assert.match(html,/Mallorca Praia & Festa 2026/);assert.equal(manifest.display,'standalone');assert.match(app,/Magic Catamarans/);assert.match(app,/Google Maps/);assert.match(app,/paidTotal: 415/);assert.match(app,/31 ago/);assert.match(app,/register\('\.\/sw\.js'\)/);assert.match(storage,/indexedDB/);assert.match(storage,/navigator\.storage/);assert.doesNotMatch(html,/src="\/assets\//);console.log('Mallorca static site smoke tests passed');

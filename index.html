@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#075B78" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Mallorca 2026" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./assets/icon.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mallorca.css" />
+    <title>Mallorca Praia & Festa 2026</title>
+  </head>
+  <body class="mallorca-theme">
+    <main id="app" class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#hoje" aria-label="Mallorca, início"><span class="brand-mark">MA</span><span>Mallorca <small>2026</small></span></a>
+        <span class="trip-badge">27–31 ago · 18 viajantes</span>
+      </header>
+
+      <section id="hoje" class="view active" data-view="hoje">
+        <div class="hero mallorca-hero">
+          <div class="hero-copy"><p class="eyebrow">MALLORCA · 27 AGO</p><h1>Praia de dia. Festa à noite.</h1><p>Roteiro, reservas pagas, gastos e mapas do grupo por Mallorca.</p><a href="#roteiro" class="primary-link" data-nav="roteiro">Ver os 5 dias <span>→</span></a></div>
+          <div class="hero-image"><img src="./assets/calo-des-moro.jpg" alt="Cala des Moro em Mallorca" /></div>
+        </div>
+        <section class="quick-grid">
+          <button class="quick-card" data-nav="roteiro"><span class="icon">◷</span><span><b>Próximo dia intenso</b><small>Três calas e AMØK às 23h45</small></span><em>›</em></button>
+          <button class="quick-card" data-nav="custos"><span class="icon">€</span><span><b>Já pago por pessoa</b><small id="home-budget">€ 415,00 confirmado</small></span><em>›</em></button>
+          <button class="quick-card" data-nav="guia"><span class="icon">✓</span><span><b>Antes de viajar</b><small>Barco, baladas e aeroporto</small></span><em>›</em></button>
+        </section>
+        <section class="section-block"><div class="section-heading"><div><p class="eyebrow">VISÃO GERAL</p><h2>Cinco dias de ilha</h2></div><button class="text-button" data-nav="roteiro">Roteiro completo</button></div><div id="cityCards" class="city-cards"></div></section>
+      </section>
+
+      <section id="roteiro" class="view" data-view="roteiro">
+        <div class="section-heading main-heading"><div><p class="eyebrow">ROTEIRO</p><h1>Dia a dia</h1><p>Toque em uma atividade para ver horário, localização, reserva e mapa.</p></div></div>
+        <div id="dayTabs" class="day-tabs" aria-label="Dias da viagem"></div>
+        <div id="itinerary" class="itinerary"></div>
+      </section>
+
+      <section id="custos" class="view" data-view="custos">
+        <div class="section-heading main-heading"><div><p class="eyebrow">SEUS VALORES</p><h1>Custos individuais</h1><p>Os custos já pagos foram confirmados por pessoa. Registre seus gastos reais abaixo.</p></div></div>
+        <section class="cost-summary"><div><span>JÁ PAGO POR PESSOA</span><strong id="plannedTotal">€ 415,00</strong><small id="paidSummary">€ 0,00 marcado como conferido</small></div><div class="summary-ring"><span id="paidPercent">0%</span><small>conferido</small></div></section>
+        <div class="cost-actions"><button class="segment active" data-cost-filter="all">Tudo</button><button class="segment" data-cost-filter="Voos">Voos</button><button class="segment" data-cost-filter="Hospedagem">Hospedagem</button><button class="segment" data-cost-filter="Experiências">Experiências</button></div>
+        <div id="costList" class="cost-list"></div>
+        <section class="expense-card"><div><p class="eyebrow">GASTO REAL</p><h2>Comida, bebida e extras</h2><p>Registre somente o que você pagou durante a viagem.</p></div><form id="expenseForm"><div class="form-row"><select id="expenseCategory" aria-label="Categoria"><option>Comida</option><option>Bebida</option><option>Transporte extra</option><option>Outro</option></select><input id="expenseAmount" inputmode="decimal" placeholder="€ valor" required /></div><input id="expenseLabel" placeholder="Descrição, ex.: jantar em Palma" required /><button class="primary-button" type="submit">Adicionar meu gasto</button></form><div id="expenseList" class="expense-list"></div></section>
+      </section>
+
+      <section id="guia" class="view" data-view="guia">
+        <div class="section-heading main-heading"><div><p class="eyebrow">GUIA DE VIAGEM</p><h1>Preparação e acesso</h1><p>Informações importantes para ter o roteiro no celular.</p></div></div>
+        <section class="guide-card blue"><span class="guide-icon">⛵</span><div><h2>Barco reservado</h2><p>Magic Catamarans, 15h30 no domingo. Encontro no cais em frente ao Auditorium de Palma, Passeig Marítim. Chegue até 15h.</p></div></section>
+        <section class="guide-card sand"><span class="guide-icon">⌂</span><div><h2>Instalar no iPhone</h2><p>No Safari, toque em Compartilhar e escolha <b>Adicionar à Tela de Início</b>. O site abre como aplicativo e seus gastos ficam salvos neste aparelho.</p></div></section>
+        <section class="checklist"><div class="section-heading"><div><p class="eyebrow">CHECKLIST</p><h2>Antes de sair</h2></div><span id="checkCount">0/8</span></div><div id="checkList"></div></section>
+        <section class="links-panel"><p class="eyebrow">LINKS ÚTEIS</p><a href="https://www.google.com/maps/search/?api=1&query=Palma+de+Mallorca+Airport" target="_blank" rel="noreferrer">Aeroporto de Palma <span>↗</span></a><a href="https://www.google.com/maps/search/?api=1&query=Port+of+Palma+Auditorium+Palma" target="_blank" rel="noreferrer">Ponto do barco <span>↗</span></a><a href="https://www.google.com/maps/search/?api=1&query=AMOK+Mallorca" target="_blank" rel="noreferrer">AMØK Mallorca <span>↗</span></a></section>
+      </section>
+    </main>
+    <nav class="bottom-nav" aria-label="Navegação principal"><button class="nav-button active" data-nav="hoje"><span>⌂</span>Hoje</button><button class="nav-button" data-nav="roteiro"><span>◫</span>Roteiro</button><button class="nav-button" data-nav="custos"><span>€</span>Custos</button><button class="nav-button" data-nav="guia"><span>✓</span>Guia</button></nav>
+    <dialog id="activityDialog"><button id="closeDialog" aria-label="Fechar">×</button><div id="dialogContent"></div></dialog>
+    <script src="./storage.js?v=1"></script>
+    <script src="./app.js?v=1"></script>
+  </body>
+</html>
