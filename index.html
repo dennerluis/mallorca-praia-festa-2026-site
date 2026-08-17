@@ -44,6 +44,7 @@
         <section class="cost-summary"><div><span>JÁ PAGO POR PESSOA</span><strong id="plannedTotal">€ 415,00</strong><small id="paidSummary">€ 0,00 marcado como conferido</small></div><div class="summary-ring"><span id="paidPercent">0%</span><small>conferido</small></div></section>
         <div class="cost-actions"><button class="segment active" data-cost-filter="all">Tudo</button><button class="segment" data-cost-filter="Voos">Voos</button><button class="segment" data-cost-filter="Hospedagem">Hospedagem</button><button class="segment" data-cost-filter="Experiências">Experiências</button></div>
         <div id="costList" class="cost-list"></div>
+        <section class="forecast-card"><div><p class="eyebrow">PREVISÃO AINDA A GASTAR</p><h2>Custos variáveis do roteiro</h2><p>Faixas do roteiro atualizado. Não incluem os itens acima já pagos.</p></div><div id="forecastList" class="forecast-list"></div></section>
         <section class="expense-card"><div><p class="eyebrow">GASTO REAL</p><h2>Comida, bebida e extras</h2><p>Registre somente o que você pagou durante a viagem.</p></div><form id="expenseForm"><div class="form-row"><select id="expenseCategory" aria-label="Categoria"><option>Comida</option><option>Bebida</option><option>Transporte extra</option><option>Outro</option></select><input id="expenseAmount" inputmode="decimal" placeholder="€ valor" required /></div><input id="expenseLabel" placeholder="Descrição, ex.: jantar em Palma" required /><button class="primary-button" type="submit">Adicionar meu gasto</button></form><div id="expenseList" class="expense-list"></div></section>
       </section>
 
@@ -58,6 +59,6 @@
     <nav class="bottom-nav" aria-label="Navegação principal"><button class="nav-button active" data-nav="hoje"><span>⌂</span>Hoje</button><button class="nav-button" data-nav="roteiro"><span>◫</span>Roteiro</button><button class="nav-button" data-nav="custos"><span>€</span>Custos</button><button class="nav-button" data-nav="guia"><span>✓</span>Guia</button></nav>
     <dialog id="activityDialog"><button id="closeDialog" aria-label="Fechar">×</button><div id="dialogContent"></div></dialog>
     <script src="./storage.js?v=1"></script>
-    <script src="./app.js?v=1"></script>
+    <script src="./app.js?v=2"></script>
   </body>
 </html>
